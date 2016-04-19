@@ -104,4 +104,8 @@ echo
 
 time ctest -j$PARALLEL_NP &> ctest.out
 
+echo
+echo "NOTE test TriBITS_CheckinTest_UnitTests which only does lots of file manipulation and never invokes the compiler:"
+echo
 
+grep CheckinTest ctest.out | grep " Test "
